@@ -5,18 +5,13 @@ import { Button, Checkbox, Icon, Item, Segment } from 'semantic-ui-react';
 function JournalListItem({journal, allJournals, setAllJournals, currentUser, setCurrentUser, userJournals}){
     const defaultPrivate = journal.private; 
     const [privateToggle, setPrivateToggle] = useState(defaultPrivate); 
-    
+    console.log(privateToggle)
 
 
 
 
     function handlePrivateToggle(e){
         e.preventDefault();
-        if(privateToggle == true){
-            setPrivateToggle(!privateToggle)
-        } else if(privateToggle == false) {
-            setPrivateToggle(!privateToggle)
-        }
         fetch(`http://localhost:3000/journals/${journal.id}`, {
             method: 'PATCH', 
             headers: {
@@ -25,8 +20,14 @@ function JournalListItem({journal, allJournals, setAllJournals, currentUser, set
             body: JSON.stringify({private: privateToggle})
         })
         .then(r => r.json())
-        .then(console.log)
+        .then(handlePrivateToggle)
     }
+
+    function handlePrivateToggle(){
+        setPrivateToggle(!privateToggle)
+    }; 
+
+
 
     function deleteJournalHelper(journalId){
         const updatedJournals = allJournals.filter((journal) => {

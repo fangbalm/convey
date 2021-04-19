@@ -33,14 +33,14 @@ function Profile({currentUser}) {
     <form onSubmit={handleSubmit}>
       <h1>{currentUser.name}'s Profile</h1>
 
-      <label>Profile Image</label>
+      {/* <label>Profile Image</label>
       <input
         type="text"
         name="image"
         autoComplete="off"
         value={image}
         onChange={handleChange}
-      />
+      /> */}
       <img
         src={
           image.length
@@ -51,10 +51,10 @@ function Profile({currentUser}) {
         style={profileImageStyles}
       />
 
-      <label>Bio</label>
+      {/* <label>Bio</label>
       <textarea name="bio" value={bio} onChange={handleChange} />
 
-      <input type="submit" value="Update" />
+      <input type="submit" value="Update" /> */}
     </form>
 
     <Header content="User Information" /> 
