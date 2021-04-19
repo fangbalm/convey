@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {Form, Button} from 'react-bootstrap';
+import { useHistory } from 'react-router';
 
 
 
@@ -7,6 +8,7 @@ function LeftSide({setCurrentUser}) {
 
     const [username, setUsername] = useState(""); 
     const [password, setPassword] = useState(""); 
+    const history = useHistory(); 
     
 
 
@@ -23,7 +25,11 @@ function LeftSide({setCurrentUser}) {
             method: "POST",
         })
           .then((r) => r.json())
-          .then(setCurrentUser);
+          .then((user) => {
+            setCurrentUser(user)
+            history.push("/")
+
+          } );
       };
 
   return (

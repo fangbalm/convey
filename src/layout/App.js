@@ -89,12 +89,33 @@ function App() {
        {/* HOMEPAGE */}
 
        <Route exact path="/">
+         {currentUser ? (
+           <>
+           <Navbar 
+           currentUser={currentUser}
+           setCurrentUser={setCurrentUser}
+           />
+           <Home />
+           </>
+
+         ) : (
+           <>
+          <Navbar 
+          currentUser={currentUser}
+          setCurrentUser={setCurrentUser}
+          />
+           <Redirect to="/login" />
+           </>
+         )}
+         </Route>
+
+       {/* <Route exact path="/">
          <Navbar 
          currentUser={currentUser}
          setCurrentUser={setCurrentUser}
          />
          <Home />
-       </Route>
+       </Route> */}
 
        <Route exact path="/login">
          <Navbar 
