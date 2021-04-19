@@ -1,16 +1,15 @@
 import React, { useState } from 'react'; 
 import { Link } from 'react-router-dom';
 import { Button, Checkbox, Icon, Item, Segment } from 'semantic-ui-react';
+import * as BiIcons from 'react-icons/bi';
 
 function JournalListItem({journal, allJournals, setAllJournals, currentUser, setCurrentUser, userJournals}){
     const defaultPrivate = journal.private; 
     const [privateToggle, setPrivateToggle] = useState(defaultPrivate); 
     console.log(privateToggle)
+   
 
-
-
-
-    function handlePrivateToggle(e){
+    function handleSetToggle(e){
         e.preventDefault();
         fetch(`http://localhost:3000/journals/${journal.id}`, {
             method: 'PATCH', 
@@ -26,7 +25,6 @@ function JournalListItem({journal, allJournals, setAllJournals, currentUser, set
     function handlePrivateToggle(){
         setPrivateToggle(!privateToggle)
     }; 
-
 
 
     function deleteJournalHelper(journalId){
@@ -49,7 +47,6 @@ function JournalListItem({journal, allJournals, setAllJournals, currentUser, set
             .then(deleteJournalHelper(journal.id));   
         }
 
-    
     return(
     <div className="journal-list-item">
          <Segment.Group>
@@ -60,6 +57,7 @@ function JournalListItem({journal, allJournals, setAllJournals, currentUser, set
                         <Item.Content>
                             <Item.Header content={journal.title}/>
                                 <Item.Description>
+                                    <div><BiIcons.BiUserCircle/>{journal.user.username}</div>
                                     {journal.description}
                                 </Item.Description>
                         </Item.Content>
@@ -68,7 +66,7 @@ function JournalListItem({journal, allJournals, setAllJournals, currentUser, set
             </Segment>
             <Segment>
                 <span>
-                    <Checkbox toggle label="Private" defaultChecked={privateToggle} onClick={handlePrivateToggle}/> 
+                    <Checkbox toggle label="Private" defaultChecked={privateToggle} onClick={handleSetToggle} /> 
                     <Button as={Link} to={`/journals/${journal.id}`} color= "black" className="view-journal-btn">
                           View Journal 
                     </Button> 

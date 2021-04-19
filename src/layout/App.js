@@ -3,6 +3,7 @@ import { Redirect, Route, Switch } from "react-router";
 import EditEntryForm from "../features/entryContainer/EditEntryForm";
 import EntryDetails from "../features/entryContainer/EntryDetails";
 import NewEntryForm from "../features/entryContainer/NewEntryForm";
+import Explore from "../features/explore/Explore";
 import JournalContainer from "../features/journalContainer/JournalContainer";
 import JournalDetails from "../features/journalContainer/JournalDetails";
 import JournalForm from "../features/journalContainer/JournalForm";
@@ -135,6 +136,20 @@ function App() {
          <Profile currentUser={currentUser} setCurrentUser={setCurrentUser}/>
        </Route>
 
+
+       <Route exact path="/explore">
+        <Navbar 
+          currentUser={currentUser}
+          setCurrentUser={setCurrentUser}
+        />  
+        <Explore
+          currentUser={currentUser}
+          setCurrentUser={setCurrentUser} 
+          allJournals={allJournals}
+          setAllJournals={setAllJournals}
+        />
+        </Route>
+
         
         
         
@@ -227,7 +242,6 @@ function App() {
         newEntryPrompt={newEntryPrompt}
         setNewEntryPrompt={setNewEntryPrompt}
         /> 
-        {/* <GetNewPrompt allCategories={allCategories} allPrompts={allPrompts} setAllPrompts={setAllPrompts} currentUser={currentUser} setCurrentUser={setCurrentUser} allJournals={allJournals} setAllJournals={setAllJournals} setNewSelectedCategory={setNewSelectedCategory} newSelectedCategory={newSelectedCategory} setNewEntryPrompt={setNewEntryPrompt} newEntryPrompt={newEntryPrompt}/> */}
         </Route>
 
 
