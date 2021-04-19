@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { Header } from "semantic-ui-react";
 
-function Profile() {
+function Profile({currentUser}) {
+  console.log(currentUser)
   const [formData, setFormData] = useState({
     image: "",
     bio: "",
@@ -19,10 +21,17 @@ function Profile() {
   }
 
   const { image, bio } = formData;
+  const profileImageStyles = {
+    border: "none", 
+    width: "80px", 
+    height: "80px"
+}
+
 
   return (
+    <div className="profile">
     <form onSubmit={handleSubmit}>
-      <h1>Username's Profile</h1>
+      <h1>{currentUser.name}'s Profile</h1>
 
       <label>Profile Image</label>
       <input
@@ -39,6 +48,7 @@ function Profile() {
             : "https://cdn.iconscout.com/icon/free/png-512/account-profile-avatar-man-circle-round-user-30452.png"
         }
         alt={"Username"}
+        style={profileImageStyles}
       />
 
       <label>Bio</label>
@@ -46,6 +56,16 @@ function Profile() {
 
       <input type="submit" value="Update" />
     </form>
+
+    <Header content="User Information" /> 
+    <h4>Username:</h4><span>{currentUser.username}</span>
+    <h4>Name:</h4><span>{currentUser.name}</span>
+    <h4>Gender:</h4><span>{currentUser.gender}</span>
+    <h4>Ethnicity:</h4><span>{currentUser.ethnicity}</span>
+
+    </div>
+
+    
   );
 }
 
