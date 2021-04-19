@@ -57,7 +57,7 @@ function JournalListItem({journal, allJournals, setAllJournals, currentUser, set
                         <Item.Content>
                             <Item.Header content={journal.title}/>
                                 <Item.Description>
-                                    <div><BiIcons.BiUserCircle/>{journal.user.username}</div>
+                                    {/* <div><BiIcons.BiUserCircle/>{journal.user.username}</div> */}
                                     {journal.description}
                                 </Item.Description>
                         </Item.Content>
@@ -76,7 +76,6 @@ function JournalListItem({journal, allJournals, setAllJournals, currentUser, set
                 </span>
             </Segment>
         </Segment.Group>
-           
     </div>
     )
 };
