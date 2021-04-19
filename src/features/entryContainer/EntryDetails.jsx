@@ -13,6 +13,13 @@ function EntryDetails({currentUser, setCurrentUser, allJournals, setAllJournals,
     // parseInt(useLocation().pathname.replace( /(^.+\D)(\d+)(\D.+$)/i,'$2')); 
 
     // const journalEntries = currentJournal.entries
+    useEffect(() => {
+        fetch(`http://localhost:3000/entries`)
+          .then((r) => r.json())
+          .then(setAllEntries);
+    }, []);
+
+
     const currentEntry = allEntries.find((entry) => {
         if(entry.id == entryId){
             return entry;

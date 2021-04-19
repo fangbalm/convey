@@ -22,31 +22,31 @@ function EntryListItem({entry, journal, setAllJournals, allEntries, handleDelete
     //         .then(deleteEntryHelper)
     // };
 
-    function deleteEntryHelper(entryId){
+    // function deleteEntryHelper(entryId){
        
-        handleDeleteEntry((journals) => journals.map(journal => {
-            if(journal.id === parseInt(journalId)){
-                const updatedEntries = allEntries.filter((entry) => {
-                    return entry.id !== parseInt(entryId);
-                })
-                console.log({updatedEntries})
-                // console.log()
-                return({...journal, entries: [...updatedEntries]})
-            } else{ 
-                return (journal)
-            }
-        }));
-    }
+    //     handleDeleteEntry((journals) => journals.map(journal => {
+    //         if(journal.id === parseInt(journalId)){
+    //             const updatedEntries = allEntries.filter((entry) => {
+    //                 return entry.id !== parseInt(entryId);
+    //             })
+    //             console.log({updatedEntries})
+    //             // console.log()
+    //             return({...journal, entries: [...updatedEntries]})
+    //         } else{ 
+    //             return (journal)
+    //         }
+    //     }));
+    // }
 
-    function handleDelete(e){
-        e.preventDefault(); 
-        fetch(`http://localhost:3000/entries/${entry.id}`, {
-            method: 'DELETE', 
+    // function handleDelete(e){
+    //     e.preventDefault(); 
+    //     fetch(`http://localhost:3000/entries/${entry.id}`, {
+    //         method: 'DELETE', 
 
-        }).then((res) => res.json())
-        .then(deleteEntryHelper)
+    //     }).then((res) => res.json())
+    //     .then(deleteEntryHelper)
            
-    }
+    // }
     
        
     
@@ -55,7 +55,7 @@ function EntryListItem({entry, journal, setAllJournals, allEntries, handleDelete
         <Segment.Group>
             <Segment>
                 {/* HANDLE DELETE */}
-            <Icon name='delete' id='clear-btn' onClick={handleDelete}/> 
+            {/* <Icon name='delete' id='clear-btn' onClick={handleDelete}/>  */}
                 <Item.Group>
                     <Item>
                         <Item.Content>
