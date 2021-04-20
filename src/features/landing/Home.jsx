@@ -1,12 +1,13 @@
 import React from 'react'; 
-import Breathe from '../breatheContainer/Breathe';
+import BreatheContainer from '../breatheContainer/BreatheContainer';
+// import Breathe from '../breatheContainer/BreatheContainer';
 
 function Home(){
     
     return(
     <div className="homepage">
            Homepage
-           <Breathe />
+           <BreatheContainer />
     </div>
     )
 };

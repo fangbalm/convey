@@ -18,6 +18,7 @@ function EntryList({journal, currentUser, setAllJournals, allEntries, handleDele
            </Button>
            {currentUser.name + "'s Journal - "} 
            <strong>{journal.title}</strong>
+          
            {showEntryItems}
     </div>
     )

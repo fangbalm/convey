@@ -1,5 +1,6 @@
 import React from 'react'; 
 import { useParams } from 'react-router';
+import { Icon } from 'semantic-ui-react';
 import EntryList from '../entryContainer/EntryList';
 
 function JournalDetails({currentUser, setCurrentUser, allJournals, setAllJournals, allEntries, handleDeleteEntry}){
@@ -19,6 +20,7 @@ function JournalDetails({currentUser, setCurrentUser, allJournals, setAllJournal
 
     return(
     <div className="journal-details">
+        <Icon circular className="icon settings"/> set background color
            {selectedJournalEntries}
     </div>
     )
