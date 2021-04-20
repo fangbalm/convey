@@ -6,24 +6,22 @@ import * as BiIcons from 'react-icons/bi';
 function JournalListItem({journal, allJournals, setAllJournals, currentUser, setCurrentUser, userJournals}){
     const defaultPrivate = journal.private; 
     const [privateToggle, setPrivateToggle] = useState(journal.private); 
-    console.log(journal)
-   
 
     function handlePrivateToggle(){
         // e.preventDefault();
-        if(journal.private == true){
-            setPrivateToggle(false)
-        } else if(journal.private == false){
-            setPrivateToggle(true)
-        }
-        // setPrivateToggle(!privateToggle)
+        // if(journal.private == true){
+        //     setPrivateToggle(false)
+        // } else if(journal.private == false){
+        //     setPrivateToggle(true)
+        // }
+        setPrivateToggle(!privateToggle)
         fetch(`http://localhost:3000/journals/${journal.id}`, {
             method: "PATCH", 
             headers: {
                 "Content-Type": "application/json"
             }, 
             body: JSON.stringify({
-                private: privateToggle,
+                private: (!privateToggle),
             })
         })
         .then(r => r.json())
@@ -39,7 +37,8 @@ function JournalListItem({journal, allJournals, setAllJournals, currentUser, set
             }
         })
         setAllJournals(updatedJournals); 
-        setPrivateToggle(!privateToggle)
+        // setPrivateToggle(!privateToggle)
+        console.log(editedJournal)
     }
 
     // function PrivateToggleHelper(){
@@ -87,7 +86,7 @@ function JournalListItem({journal, allJournals, setAllJournals, currentUser, set
             </Segment>
             <Segment>
                 <span>
-                    <Checkbox toggle label="Private" defaultChecked={privateToggle} onClick={handlePrivateToggle} /> 
+                    <Checkbox toggle label="Private" checked={privateToggle} onClick={handlePrivateToggle} /> 
                     <Button as={Link} to={`/journals/${journal.id}`} color= "black" className="view-journal-btn">
                           View Journal 
                     </Button> 
