@@ -5,26 +5,47 @@ import * as BiIcons from 'react-icons/bi';
 
 function JournalListItem({journal, allJournals, setAllJournals, currentUser, setCurrentUser, userJournals}){
     const defaultPrivate = journal.private; 
-    const [privateToggle, setPrivateToggle] = useState(defaultPrivate); 
-    console.log(privateToggle)
+    const [privateToggle, setPrivateToggle] = useState(journal.private); 
+    console.log(journal)
    
 
-    function handleSetToggle(e){
-        e.preventDefault();
+    function handlePrivateToggle(){
+        // e.preventDefault();
+        if(journal.private == true){
+            setPrivateToggle(false)
+        } else if(journal.private == false){
+            setPrivateToggle(true)
+        }
+        // setPrivateToggle(!privateToggle)
         fetch(`http://localhost:3000/journals/${journal.id}`, {
-            method: 'PATCH', 
+            method: "PATCH", 
             headers: {
                 "Content-Type": "application/json"
             }, 
-            body: JSON.stringify({private: privateToggle})
+            body: JSON.stringify({
+                private: privateToggle,
+            })
         })
         .then(r => r.json())
-        .then(handlePrivateToggle)
+        .then((editedJournal) => editJournalHelper(editedJournal))
     }
 
-    function handlePrivateToggle(){
+    function editJournalHelper(editedJournal){
+        const updatedJournals = allJournals.map((journal) => {
+            if(journal.id == editedJournal.id){
+                return {...editedJournal}
+            } else {
+                return journal
+            }
+        })
+        setAllJournals(updatedJournals); 
         setPrivateToggle(!privateToggle)
-    }; 
+    }
+
+    // function PrivateToggleHelper(){
+    //     setPrivateToggle(!privateToggle)
+    //     handleSetToggle();
+    // }; 
 
 
     function deleteJournalHelper(journalId){
@@ -66,7 +87,7 @@ function JournalListItem({journal, allJournals, setAllJournals, currentUser, set
             </Segment>
             <Segment>
                 <span>
-                    <Checkbox toggle label="Private" defaultChecked={privateToggle} onClick={handleSetToggle} /> 
+                    <Checkbox toggle label="Private" defaultChecked={privateToggle} onClick={handlePrivateToggle} /> 
                     <Button as={Link} to={`/journals/${journal.id}`} color= "black" className="view-journal-btn">
                           View Journal 
                     </Button> 

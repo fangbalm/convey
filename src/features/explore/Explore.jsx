@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 // import JournalListItem from '../journalContainer/JournalListItem';
 import JournalExploreItem from './JournalExploreItem';
 
-function Explore({allJournals, currentUser}) {
+function Explore({allJournals, currentUser, setAllJournals}) {
+    
+    useEffect(() => {
+        fetch(`http://localhost:3000/journals`)
+          .then((r) => r.json())
+          .then(setAllJournals);
+    }, []);
+    
+
     const publicJournals = allJournals.filter((journal) => {
         if(journal.private == false){
             return journal

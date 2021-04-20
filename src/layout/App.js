@@ -32,7 +32,7 @@ function App() {
   // FETCH USER
 
 
-  console.log(currentUser)
+  // console.log(currentUser)
 
   // FETCH JOURNAL
 
