@@ -73,7 +73,7 @@ function Affirmations(){
                        <ReactTextTransition text={affirmations[randomAffirmIndex]} springConfig={{ stiffness: 50, damping: 20 }}  className="affirm-text"/>
                        </div>
               </div>
-              <Button className="affirm-toggle" onClick={handleAffirmToggle} content="Feel Good" />
+              <Button className="affirm-toggle" onClick={handleAffirmToggle} content="Feel Good" color="#88c9c5" />
         </div>
 
     )
