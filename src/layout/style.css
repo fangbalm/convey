@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
 .homepage {
   
   position:fixed;
@@ -285,7 +285,6 @@ span {
 }
 
 .convey-logo {
-  
     color: white; 
     position: absolute; 
     font-family: 'Arvo', serif;
@@ -297,6 +296,12 @@ span {
 .affirm-toggle {
   margin: 300px;
 } 
+
+.affirmation-title {
+  font-family: 'PT Mono', monospace;
+  font-size: 18px; 
+  padding: 10px; 
+}
 
 /* BREATHING CIRCLE  */
 

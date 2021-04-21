@@ -68,7 +68,7 @@ function Affirmations(){
     return(
         <div className="affirmations">
             <div className="inspo-quote-container">
-                      <span>To Keep You Going:</span>
+                      <span className="affirmation-title">To Keep You Going:</span>
                        <div className="inspo-box">
                        <ReactTextTransition text={affirmations[randomAffirmIndex]} springConfig={{ stiffness: 50, damping: 20 }} noOverflow className="affirm-text"/>
                        </div>
