@@ -58,10 +58,10 @@ function Home({currentUser}){
                            </span>
                        </div>
                        <div className="view-actions">
-                       <Button className="view-btn" onClick={handleBreatheToggle}>
+                       <button className="view-btn" onClick={handleBreatheToggle}>
                        <GiIcons.GiLungs className="lungs" />
                            {/* Breathe */}
-                       </Button>
+                       </button>
                        </div>
                        {/* <span className="status-number">
                            {journalLength}

@@ -35,7 +35,6 @@ function JournalContainer({currentUser, setCurrentUser, allJournals, setAllJourn
     
     return(
     <div className="journal-container">
-            
             <Button as={Link} exact="true" to="/journals/new" className="ui labeled icon button" id="add-journal-btn">
                 Add Journal
             </Button>
