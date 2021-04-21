@@ -15,7 +15,7 @@ import MyTextInput from '../../common/form/MyTextInput';
         const [entryContent, setEntryContent] = useState("");
         const journalId = useParams().id;
         const history = useHistory();
-        const entryDate = "2021-04-15T12:39:51.259Z";
+        const entryDate = "2021-04-21T12:39:51.259Z";
 
         const currentJournal = allJournals.find((journal) => {
             if(journal.id == journalId){

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'; 
 import { useHistory, useLocation, useParams } from 'react-router';
-// import moment from 'moment';
+import moment from 'moment';
 import { Segment, Button, Item } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+
 
 function EntryDetails({currentUser, setCurrentUser, allJournals, setAllJournals, allEntries, setAllEntries}){
     const history = useHistory(); 
@@ -50,7 +51,7 @@ function EntryDetails({currentUser, setCurrentUser, allJournals, setAllJournals,
 
 
 
-    // const dateData = moment.utc(currentEntry.date).format("dddd, MMMM Do YYYY, h:mm A"); 
+    const dateData = moment.utc(currentEntry.date).format("dddd, MMMM Do YYYY, h:mm A"); 
    
     return(
     <div className="entry-details">
@@ -58,7 +59,7 @@ function EntryDetails({currentUser, setCurrentUser, allJournals, setAllJournals,
                 <Segment>
                 {/* <Button name='delete' id='clear-btn' onClick={handleDeleteEntry}>Delete</Button> */}
                     <br></br>
-                    <strong>Date:</strong> {currentEntry.date}
+                    <strong>Date:</strong> {dateData}
                     <br></br>
                     <strong>Mood:</strong> {currentEntry.mood}
                     <br></br>
