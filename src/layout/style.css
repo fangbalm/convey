@@ -1,4 +1,59 @@
-body {
+.homepage {
+  background-color: #f3f6fd;
+}
+
+:root {
+  --app-container: #f3f6fd;
+  --main-color: #1f1c2e;
+  --secondary-color: #4A4A4A;
+  --link-color: #1f1c2e;
+  --link-color-hover: #c3cff4;
+  --link-color-active: #fff;
+  --link-color-active-bg: #1f1c2e;
+  --projects-section: #fff;
+  --message-box-hover: #fafcff;
+  --message-box-border: #e9ebf0;
+  --more-list-bg: #fff;
+  --more-list-bg-hover: #f6fbff;
+  --more-list-shadow: rgba(209, 209, 209, 0.4);
+  --button-bg: #1f1c24;
+  --search-area-bg: #fff;
+  --star: #1ff1c2e;
+  --message-btn: #fff;
+}
+
+/* .homepage{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--app-container);
+  transition: 0.2s;
+  max-width: 1800px;
+} */
+
+.dashboard-section{
+    flex: 2;
+    background-color: var(--projects-section);
+    border-radius: 32px;
+    padding: 32px 32px 0 32px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-section-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  color: var(--main-color);
+}
+
+
+
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -103,7 +158,7 @@ span {
 /* BREATHING CIRCLE  */
 
 
-.breathe-body {
+/* .breathe-body {
   background-image: url(https://wallpapersite.com/images/pages/pic_w/4826.jpg);
   background-size: cover;
   display: flex;
@@ -243,4 +298,4 @@ span {
 	100% {
 		transform: scale(.6);
 	}			
-}
+}  */

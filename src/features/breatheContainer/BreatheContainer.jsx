@@ -13,6 +13,7 @@ import {
   Pointer,
   GlobalStyles,
 } from './BreatheStyles';
+import BreatheHeader from './BreatheHeader';
 
 const BreatheContainer = () => {
   const [direction, setDirection] = useState('');
@@ -78,7 +79,7 @@ const BreatheContainer = () => {
   return (
     <React.Fragment>
       <Main>
-        {/* <Header Logo={Logo} /> */}
+        <BreatheHeader  />
         <Container className={direction}>
           <Circle />
           <p>{text.toUpperCase()}</p>
