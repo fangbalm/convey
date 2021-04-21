@@ -13,6 +13,7 @@ import Profile from "../features/landing/Profile";
 import GetNewCategory from "../features/promptContainer/GetNewCategory";
 import GetNewPrompt from "../features/promptContainer/GetNewPrompt";
 import Navbar from "../Navbar";
+import JournalExploreDetails from "../features/explore/JournalExploreDetails"
 
 
 function App() {
@@ -150,6 +151,21 @@ function App() {
         />
         </Route>
 
+        <Route exact path="/explore/journals/:id">
+        <Navbar 
+          currentUser={currentUser}
+          setCurrentUser={setCurrentUser}
+        />  
+        <JournalExploreDetails
+          currentUser={currentUser}
+          setCurrentUser={setCurrentUser} 
+          allJournals={allJournals}
+          setAllJournals={setAllJournals}
+        />
+        </Route>
+
+        {/* explore/journals/${journal.id}` */}
+
         
         
         
@@ -260,9 +276,6 @@ function App() {
         newEditedEntry={newEditedEntry}
         />
         </Route>
-
-
-
 
         <Route exact path="/journals/:id/entries/:id/edit">
         <Navbar 

@@ -33,7 +33,7 @@ export const H1 = styled.h1`
   font-size: 2.5rem;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  text-shadow: 0px 0px 3px #ffc400, 0px 0px 1px #616161;
+  text-shadow: 0px 0px 3px #c8c8c8, 0px 0px 1px #616161;
   color: #e6e7ee;
   @media screen and (max-width: 800px) {
     font-size: 2.5rem;
@@ -230,7 +230,7 @@ export const Buttons = styled.button`
     color: #d9282f;
   }
   &.btn_start {
-    color: #679436;
+    color: #88c9c5;
   }
   &:focus {
     outline: none;

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "semantic-ui-react";
+import ReactTextTransition, { presets } from "react-text-transition";
 
 function Affirmations(){
   const [randomAffirmIndex, setRandomAffirmIndex] = useState(0);
@@ -69,7 +70,7 @@ function Affirmations(){
             <div className="inspo-quote-container">
                       <span>To Keep You Going:</span>
                        <div className="inspo-box">
-                       {affirmations[randomAffirmIndex]}
+                       <ReactTextTransition text={affirmations[randomAffirmIndex]} springConfig={{ stiffness: 50, damping: 20 }} noOverflow className="affirm-text"/>
                        </div>
               </div>
               <Button className="affirm-toggle" onClick={handleAffirmToggle} content="Feel Good" />

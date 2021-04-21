@@ -20,7 +20,7 @@ function JournalDetails({currentUser, setCurrentUser, allJournals, setAllJournal
 
     return(
     <div className="journal-details">
-        <Icon circular className="icon settings"/> set background color
+        {/* <Icon circular className="icon settings"/> set background color */}
            {selectedJournalEntries}
     </div>
     )

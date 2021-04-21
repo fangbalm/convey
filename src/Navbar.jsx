@@ -18,6 +18,7 @@ function Navbar({currentUser}) {
       <IconContext.Provider value={{ color: '#fff' }}>
         <div className='navbar'>
          <div className="user-text">Welcome {currentUser ? currentUser.name : defaultUser}</div>
+         <div className="convey-logo">Convey</div>
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>

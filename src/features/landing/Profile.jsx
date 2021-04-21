@@ -30,6 +30,7 @@ function Profile({currentUser}) {
 
   return (
     <div className="profile">
+      <div className="profile-section">
     <form onSubmit={handleSubmit}>
       <h1>{currentUser.name}'s Profile</h1>
 
@@ -64,6 +65,7 @@ function Profile({currentUser}) {
     <h4>Ethnicity:</h4><span>{currentUser.ethnicity}</span>
 
     </div>
+  </div>
 
     
   );

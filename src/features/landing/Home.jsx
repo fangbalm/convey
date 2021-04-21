@@ -5,6 +5,7 @@ import * as BsIcons from 'react-icons/bs';
 import * as GiIcons from 'react-icons/gi';
 import { Button } from 'semantic-ui-react';
 import Affirmations from '../affirmations/AffirmationsContainer';
+import ReactTextTransition, { presets } from "react-text-transition";
 // import Breathe from '../breatheContainer/BreatheContainer';
 
 
@@ -14,20 +15,6 @@ function Home({currentUser}){
     const userJournals = currentUser.journals;
     const [breatheIsClicked, setBreatheIsClicked] = useState(false); 
 
-
-
-
-    // console.log(userJournals)
-
-  
-    // console.log(test)
-
-    // console.log(test)
-
-    // const test = currentUser.journals
-    // console.log(test)
-
-    // console.log(journalLength)
 
     function handleBreatheToggle(){
         setBreatheIsClicked(!breatheIsClicked)
@@ -40,7 +27,6 @@ function Home({currentUser}){
     
     return(
     <div className="homepage">
-           Homepage
            <div className="dashboard-section">
                <div className="dashboard-section-header">
                    <p>Dashboard</p>
