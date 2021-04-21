@@ -2,23 +2,24 @@ import React, { useState } from 'react';
 import BreatheContainer from '../breatheContainer/BreatheContainer';
 import moment from 'moment';
 import * as BsIcons from 'react-icons/bs';
+import * as GiIcons from 'react-icons/gi';
 import { Button } from 'semantic-ui-react';
+import Affirmations from '../affirmations/AffirmationsContainer';
 // import Breathe from '../breatheContainer/BreatheContainer';
 
 
 function Home({currentUser}){
     const [currentTime, setCurrentTime] = useState(moment().format('MMMM Do YYYY, h:mm:ss a'));
     const journalLength = currentUser.journals.length;
-    const userJournals = currentUser.journals
+    const userJournals = currentUser.journals;
+    const [breatheIsClicked, setBreatheIsClicked] = useState(false); 
+
+
+
 
     // console.log(userJournals)
 
-    const test = userJournals.forEach((journal) => {
-            // if(journal.entries){
-            //     return "Hi!"
-            // }
-    })
-
+  
     // console.log(test)
 
     // console.log(test)
@@ -27,6 +28,11 @@ function Home({currentUser}){
     // console.log(test)
 
     // console.log(journalLength)
+
+    function handleBreatheToggle(){
+        setBreatheIsClicked(!breatheIsClicked)
+
+    }
 
     setInterval(function(){
         setCurrentTime(moment().format('MMMM Do YYYY, h:mm:ss a'));
@@ -65,30 +71,33 @@ function Home({currentUser}){
                                <BsIcons.BsCircle className="circle-btn" />
                            </span>
                        </div>
-
                        <div className="view-actions">
-                       <Button class="view-btn list-view">
-                           Breathe
+                       <Button className="view-btn" onClick={handleBreatheToggle}>
+                       <GiIcons.GiLungs className="lungs" />
+                           {/* Breathe */}
                        </Button>
-
                        </div>
-
-                      
-
-
-
-
-
                        {/* <span className="status-number">
                            {journalLength}
                        </span>
                        <span className="journal-count">Journals</span> */}
                        
                    </div>
+                   {breatheIsClicked ? <BreatheContainer /> : null}
+                   {/* <BreatheContainer /> */}
+                   <Affirmations />
+                   
+                       {/* <div className="inspo-quote-container">
+                           <span>To Keep You Going:</span>
+                       <div className="inspo-box">
+                          <Affirmations />
 
+                       </div>
+
+                       </div> */}
+                   
                </div>
            </div>
-           {/* <BreatheContainer /> */}
     </div>
     )
 };

@@ -88,9 +88,15 @@
 }
 
 .circle-btn {
-  width: 10px;
+  width: 100%;
   padding: 1px;
 }
+
+.lungs {
+  width: 100%; 
+  height: 100%;
+}
+
 
 /* .item-status:not(:last-child) .status-type:after {
   content: "";
@@ -115,8 +121,26 @@
   font-size: 14px;
 }
 
+.inspo-quote-container {
+  margin: 10px; 
+}
 
-/* body {
+.inspo-box {
+  border: 1px solid rgb(215, 215, 215); 
+  border-radius: 3%;
+  display: block; 
+  height: 100px;
+  margin: 12px;
+}
+
+.view-actions {
+  float: right; 
+  justify-content: space-between; 
+}
+
+
+
+ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -216,6 +240,10 @@ span {
   color: white; 
   position: absolute; 
   left: 90%;
+}
+
+.affirm-toggle {
+  margin: 300px;
 }
 
 /* BREATHING CIRCLE  */
