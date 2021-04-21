@@ -96,7 +96,7 @@ function App() {
            currentUser={currentUser}
            setCurrentUser={setCurrentUser}
            />
-           <Home />
+           <Home currentUser={currentUser} />
            </>
 
          ) : (

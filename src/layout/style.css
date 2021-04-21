@@ -32,7 +32,7 @@
   max-width: 1800px;
 } */
 
-.dashboard-section{
+.dashboard-section {
     flex: 2;
     background-color: var(--projects-section);
     border-radius: 32px;
@@ -43,7 +43,7 @@
     flex-direction: column;
 }
 
-.dashboard-section-header{
+.dashboard-section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,6 +51,69 @@
   color: var(--main-color);
 }
 
+.dashboard-section-header .time {
+  font-size: 20px;
+}
+
+.dashboard-section-header p {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  opacity: 0.9;
+  margin: 0;
+  color: var(--main-color);
+}
+
+.dashboard-section-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 32px;
+}
+
+.journals-status {
+  display: flex;
+}
+
+.item-status {
+  display: flex;
+  flex-direction: column;
+  margin-right: 16px;
+}
+
+
+/* @media */
+.journal-status {
+  margin-right: 0;
+}
+
+.circle-btn {
+  width: 10px;
+  padding: 1px;
+}
+
+/* .item-status:not(:last-child) .status-type:after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translatey(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid var(--secondary-color);
+} */
+
+.status-number {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+.status-number, .status-type {
+  font-size: 14px;
+}
 
 
 /* body {
