@@ -54,8 +54,8 @@ function LeftSide({setCurrentUser}) {
           autoComplete="current-password"
         />
         <br></br>
-        <input type="submit" value="Login" />
-        <input type="submit" value="Signup" />
+        <input type="submit" value="Login" className="login-btn" />
+        <input type="submit" value="Signup" className="login-btn" />
       </form>
     </div>
     )

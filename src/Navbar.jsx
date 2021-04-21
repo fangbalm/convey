@@ -18,6 +18,10 @@ function Navbar({currentUser}) {
       <IconContext.Provider value={{ color: '#fff' }}>
         <div className='navbar'>
          <div className="user-text">Welcome {currentUser ? currentUser.name : defaultUser}</div>
+         {currentUser ? (<img src={"http://semantic-ui.com/images/avatar2/large/molly.png"} className="nav-image"
+      />) : null}
+         {/* <img src={"http://semantic-ui.com/images/avatar2/large/molly.png"} className="user-img"
+      /> */}
          <div className="convey-logo">Convey</div>
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />

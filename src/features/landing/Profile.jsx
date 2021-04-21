@@ -22,7 +22,7 @@ function Profile({currentUser}) {
 
   const { image, bio } = formData;
   const profileImageStyles = {
-    border: "none", 
+    border: "none",
     width: "80px", 
     height: "80px"
 }
@@ -43,13 +43,7 @@ function Profile({currentUser}) {
         onChange={handleChange}
       /> */}
       <img
-        src={
-          image.length
-            ? image
-            : "https://cdn.iconscout.com/icon/free/png-512/account-profile-avatar-man-circle-round-user-30452.png"
-        }
-        alt={"Username"}
-        style={profileImageStyles}
+        src={"http://semantic-ui.com/images/avatar2/large/molly.png"} className="user-img"
       />
 
       {/* <label>Bio</label>
@@ -58,7 +52,6 @@ function Profile({currentUser}) {
       <input type="submit" value="Update" /> */}
     </form>
 
-    <Header content="User Information" /> 
     <h4>Username:</h4><span>{currentUser.username}</span>
     <h4>Name:</h4><span>{currentUser.name}</span>
     <h4>Gender:</h4><span>{currentUser.gender}</span>

@@ -119,7 +119,18 @@ import MyTextInput from '../../common/form/MyTextInput';
                  <input type="text" value={entryTitle} name="title" onChange={(e) => setEntryTitle(e.target.value)}></input>
                  <br/>
                  <label>Mood</label>
-                 <input type="text" value={entryMood} name="mood" onChange={(e) => setEntryMood(e.target.value)}></input>
+                 <select id="mood" name="mood" onChange={(e) => setEntryMood(e.target.value)}>
+                     <option value={entryMood}>Angry</option>
+                     <option value={entryMood}>Confused</option>
+                     <option value={entryMood}>Contemplative</option>
+                     <option value={entryMood}>Mournful</option>
+                     <option value={entryMood}>Contemplative</option>
+                     <option value={entryMood}>Happy</option>
+                     <option value={entryMood}>Sad</option>
+                     <option value={entryMood}>Excited</option>
+                     <option value={entryMood}>Nervous</option>
+                 </select>
+                 {/* <input type="text" value={entryMood} name="mood" onChange={(e) => setEntryMood(e.target.value)}></input> */}
                  <br/>
                  <label>Content</label>
                  <textarea type="text" value={entryContent} name="content" onChange={(e) => setEntryContent(e.target.value)}></textarea>
