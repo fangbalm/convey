@@ -6,9 +6,6 @@ import { Header } from 'semantic-ui-react';
 function EditEntryForm({allEntries, allJournals, setAllJournals, setAllEntries}){
     const entryId = useParams().id;
     const history = useHistory(); 
-    
-    // console.log(entryId);
-    // console.log(history)
 
     const currentEntry = allEntries.find((entry) => {
         if(entry.id == entryId){
@@ -77,7 +74,6 @@ function EditEntryForm({allEntries, allJournals, setAllJournals, setAllEntries})
             <form onSubmit={handleEditEntry}>
             <Header color="blue" content="Entry Form"/> 
             <Header sub color='yellow' content='Prompt'/>
-                    {/* {newEntryPrompt.prompt} */}
                 <br/>
                 <label>Entry Title</label>
                  <input type="text" value={newEntryTitle} name="title" onChange={(e) => setNewEntryTitle(e.target.value)}></input>

@@ -8,12 +8,7 @@ function JournalListItem({journal, allJournals, setAllJournals, currentUser, set
     const [privateToggle, setPrivateToggle] = useState(journal.private); 
 
     function handlePrivateToggle(){
-        // e.preventDefault();
-        // if(journal.private == true){
-        //     setPrivateToggle(false)
-        // } else if(journal.private == false){
-        //     setPrivateToggle(true)
-        // }
+
         setPrivateToggle(!privateToggle)
         fetch(`http://localhost:3000/journals/${journal.id}`, {
             method: "PATCH", 
@@ -37,15 +32,8 @@ function JournalListItem({journal, allJournals, setAllJournals, currentUser, set
             }
         })
         setAllJournals(updatedJournals); 
-        // setPrivateToggle(!privateToggle)
         console.log(editedJournal)
     }
-
-    // function PrivateToggleHelper(){
-    //     setPrivateToggle(!privateToggle)
-    //     handleSetToggle();
-    // }; 
-
 
     function deleteJournalHelper(journalId){
         const updatedJournals = allJournals.filter((journal) => {

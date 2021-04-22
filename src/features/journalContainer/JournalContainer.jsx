@@ -6,21 +6,6 @@ import JournalSearch from './JournalSearch';
 
 function JournalContainer({currentUser, setCurrentUser, allJournals, setAllJournals}){
     const [searchTerm, setSearchTerm] = useState("");
-    // console.log(searchTerm)
-
-    // const [userJournals, setUserJournals] = useState([]);
-    // let filteredJournals = [];
-
-    // if(allJournals){
-    //     let filteredJournals = allJournals.filter((journal) => {
-    //         if(journal.user.id === currentUser.id){
-    //             return journal; 
-    //         }
-    //     })
-    //     console.log(filteredJournals)
-    // };
-
-    // setUserJournals(filteredJournals);
 
     function handleSearchChange(e){
         setSearchTerm(e.target.value)

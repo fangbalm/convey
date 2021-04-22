@@ -6,10 +6,6 @@ import EntryList from '../entryContainer/EntryList';
 function JournalDetails({currentUser, setCurrentUser, allJournals, setAllJournals, allEntries, handleDeleteEntry}){
     const journalId = useParams().id;
 
-    // allJournals.map((journal) => {
-    //     console.log(journal)
-    // })
-
     const selectedJournalEntries = allJournals.map((journal) => {
         console.log(allJournals)
         if(journal.id == journalId){

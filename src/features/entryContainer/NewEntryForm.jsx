@@ -123,6 +123,7 @@ import MyTextInput from '../../common/form/MyTextInput';
                      <option value={entryMood}>Angry</option>
                      <option value={entryMood}>Confused</option>
                      <option value={entryMood}>Contemplative</option>
+                     <option value={entryMood}>Content</option>
                      <option value={entryMood}>Mournful</option>
                      <option value={entryMood}>Contemplative</option>
                      <option value={entryMood}>Happy</option>
