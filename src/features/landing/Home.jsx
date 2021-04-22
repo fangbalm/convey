@@ -49,7 +49,7 @@ function Home({currentUser}){
 
                        <div className="item-status">
                            <span className="status-number">
-                               13
+                               4
                                {/* {journalEntriesLength} */}
                            </span>
                            <span className="status-type">

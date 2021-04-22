@@ -38,8 +38,8 @@ function Explore({allJournals, currentUser, setAllJournals}) {
   return (
     <div className='explore'>
        <JournalSearch searchTerm={searchTerm} handleSearchChange={handleSearchChange}/> 
-       <Checkbox label='View Your Journals' />
-       <Checkbox label='View User Journals' />
+       {/* <Checkbox label='View Your Journals' />
+       <Checkbox label='View User Journals' /> */}
 
       {showPublicJournals}
     </div>

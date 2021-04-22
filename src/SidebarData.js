@@ -2,6 +2,7 @@ import React from 'react';
 // import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
+import * as ImIcons from 'react-icons/im';
 import * as GiIcons from 'react-icons/gi';
 
 export const SidebarData = [
@@ -14,7 +15,7 @@ export const SidebarData = [
   {
     title: 'Profile',
     path: '/profile',
-    icon: <GiIcons.GiBookshelf />,
+    icon: <ImIcons.ImProfile />,
     cName: 'nav-text'
   },
   {
