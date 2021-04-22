@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import JournalSearch from '../journalContainer/JournalSearch';
-// import JournalListItem from '../journalContainer/JournalListItem';
 import JournalExploreItem from './JournalExploreItem';
-import { Checkbox } from 'semantic-ui-react'
+// import { Checkbox } from 'semantic-ui-react'
 
 function Explore({allJournals, currentUser, setAllJournals}) {
   const [searchTerm, setSearchTerm] = useState('');

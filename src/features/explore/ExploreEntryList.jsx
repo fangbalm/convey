@@ -12,10 +12,6 @@ function ExploreEntryList({journal, currentUser, setAllJournals, allEntries, han
     
     return(
     <div className="entry-list">
-           {/* <Button as={Link} to={`${journal.id}/entries/new/getPrompt`}
-        className="add-entry-btn">
-            Add Entry
-           </Button> */}
            {journal.user.username + "'s Journal - "} 
            <strong>{journal.title}</strong>
           

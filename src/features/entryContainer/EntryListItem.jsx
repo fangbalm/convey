@@ -9,9 +9,6 @@ function EntryListItem({entry, journal, setAllJournals, allEntries, handleDelete
        const dateData = moment.utc(entry.date).format("MM/DD/YY")
        const journalId = journal.id;
 
-      
-
-      
 
     // function handleDeleteEntry(e){
     //     e.preventDefault(); 

@@ -4,7 +4,6 @@ import { Icon, Item, Segment, Button, Checkbox } from 'semantic-ui-react';
 import moment from 'moment';
 
 function ExploreEntryListItem({entry, journal, setAllJournals, allEntries, handleDeleteEntry, currentUser}) {
-       // console.log(entry)
        const entryPreview = entry.content.split('.')[0] + "..."
        const dateData = moment.utc(entry.date).format("MM/DD/YY")
        const journalId = journal.id;

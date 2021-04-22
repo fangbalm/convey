@@ -5,8 +5,6 @@ import * as BsIcons from 'react-icons/bs';
 import * as GiIcons from 'react-icons/gi';
 import { Button } from 'semantic-ui-react';
 import Affirmations from '../affirmations/AffirmationsContainer';
-import ReactTextTransition, { presets } from "react-text-transition";
-// import Breathe from '../breatheContainer/BreatheContainer';
 
 
 function Home({currentUser}){
@@ -60,28 +58,11 @@ function Home({currentUser}){
                        <div className="view-actions">
                        <button className="view-btn" onClick={handleBreatheToggle}>
                        <GiIcons.GiLungs className="lungs" />
-                           {/* Breathe */}
                        </button>
                        </div>
-                       {/* <span className="status-number">
-                           {journalLength}
-                       </span>
-                       <span className="journal-count">Journals</span> */}
-                       
                    </div>
                    {breatheIsClicked ? <BreatheContainer /> : null}
-                   {/* <BreatheContainer /> */}
-                   <Affirmations />
-                   
-                       {/* <div className="inspo-quote-container">
-                           <span>To Keep You Going:</span>
-                       <div className="inspo-box">
-                          <Affirmations />
-
-                       </div>
-
-                       </div> */}
-                   
+                   <Affirmations />                 
                </div>
            </div>
     </div>

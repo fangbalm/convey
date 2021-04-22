@@ -8,10 +8,6 @@ function JournalExploreDetails({currentUser, setCurrentUser, allJournals, setAll
     const journalId = useParams().id;
     const history = useHistory();
 
-    // allJournals.map((journal) => {
-    //     console.log(journal)
-    // })
-
     const selectedJournalEntries = allJournals.map((journal) => {
         console.log(allJournals)
         if(journal.id == journalId){

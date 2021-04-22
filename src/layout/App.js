@@ -28,30 +28,14 @@ function App() {
   const [newEditedEntry, setNewEditedEntry] = useState({}); 
   console.log(newEditedEntry)
 
-  // console.log(newEntryPrompt)
-
-  // FETCH USER
-
-
-  // console.log(currentUser)
 
   // FETCH JOURNAL
-
-  // /journals/:id/entries
-
-  // /journals/:id/entries/:id
-
-  // /journals/1/entries/1/edit
-
-
 
   useEffect(() => {
     fetch(`http://localhost:3000/journals`)
     .then((r) => r.json())
     .then(setAllJournals)
   }, []);
-
-  // ${journal.id}/entries/${entry.id}
 
   // FETCH ENTRIES
 
@@ -111,14 +95,6 @@ function App() {
          )}
          </Route>
 
-       {/* <Route exact path="/">
-         <Navbar 
-         currentUser={currentUser}
-         setCurrentUser={setCurrentUser}
-         />
-         <Home />
-       </Route> */}
-
        <Route exact path="/login">
          <Navbar 
          currentUser={currentUser}
@@ -163,10 +139,6 @@ function App() {
           setAllJournals={setAllJournals}
         />
         </Route>
-
-        {/* explore/journals/${journal.id}` */}
-
-        
         
         
         {/* JOURNALS  */}
@@ -291,9 +263,6 @@ function App() {
         setAllEntries={setAllEntries}
         /> 
         </Route>
-        }
-      }
-
      </Switch>
     </div>
   );

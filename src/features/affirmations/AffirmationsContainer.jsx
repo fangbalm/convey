@@ -5,7 +5,6 @@ import ReactTextTransition, { presets } from "react-text-transition";
 function Affirmations(){
   const [randomAffirmIndex, setRandomAffirmIndex] = useState(0);
 
-
   const affirmations = [
     "You got this",
     "You'll figure it out",
@@ -62,9 +61,7 @@ function Affirmations(){
     let toggledIndex = Math.floor(Math.random()*affirmations.length); 
     setRandomAffirmIndex(toggledIndex);
   }
-  // console.log(randomAffirmIndex)
-
-            
+         
     return(
         <div className="affirmations">
             <div className="inspo-quote-container">

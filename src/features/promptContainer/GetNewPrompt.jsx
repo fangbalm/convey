@@ -11,9 +11,6 @@ function GetNewPrompt({allCategories, allPrompts, setAllPrompts, currentUser, se
         return {key: categoryObj.category, text: categoryObj.category, value: categoryObj.category}
     });
 
-    // console.log(newSelectedCategory);
-
-
     const currentJournal = allJournals.find((journal) => {
         if(journal.id == journalId){
             return journal;

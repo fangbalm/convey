@@ -20,7 +20,6 @@ function GetNewCategory({currentUser, setCurrentUser, allJournals, setAllJournal
       }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
-        //   console.log(values);
           setSubmitting(false);
           setNewSelectedCategory(values)
           setIsSubmitted(true); 
@@ -35,7 +34,6 @@ function GetNewCategory({currentUser, setCurrentUser, allJournals, setAllJournal
           <div className="col-sm-12">
             <Form className='ui form'>
               <div className="form-group">
-                {/* <label>Prompt Category</label> */}
                 <br />
                 <div className="form-check form-check-inline">
                   <Field

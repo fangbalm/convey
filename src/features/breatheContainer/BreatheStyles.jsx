@@ -130,14 +130,7 @@ export const GradientCircle = styled.div`
     #717171 60%,
     #bfbfbe 100%
   );
-  /* background: conic-gradient(
-    #ff9100 0%,
-    #ffd180 40%,
-    #ff1744 40%,
-    #ff5252 60%,
-    #336d64 60%,
-    #64dd17 100%
-  ); */
+
   height: 320px;
   width: 320px;
   z-index: -2;

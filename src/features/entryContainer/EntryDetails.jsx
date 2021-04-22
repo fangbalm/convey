@@ -9,11 +9,7 @@ function EntryDetails({currentUser, setCurrentUser, allJournals, setAllJournals,
     const history = useHistory(); 
     const [currentPrompt, setCurrentPrompt] = useState({}); 
     const entryId = useParams().id;
- 
-    
     // parseInt(useLocation().pathname.replace( /(^.+\D)(\d+)(\D.+$)/i,'$2')); 
-
-    // const journalEntries = currentJournal.entries
     useEffect(() => {
         fetch(`http://localhost:3000/entries`)
           .then((r) => r.json())
@@ -26,17 +22,6 @@ function EntryDetails({currentUser, setCurrentUser, allJournals, setAllJournals,
             return entry;
         }
     });
-
-    // const journalId = currentEntry.journal.id; 
-    console.log(currentEntry)
-    // const currentJournal = allJournals.find((journal) => {
-    //     if(journal.id === journalId){
-    //         return journal;
-    //     }
-    // })
-
-
-    // console.log(currentEntry)
 
     useEffect(() => {
         fetch(`http://localhost:3000/prompts/${currentEntry.prompt.id}`)
@@ -57,7 +42,6 @@ function EntryDetails({currentUser, setCurrentUser, allJournals, setAllJournals,
     <div className="entry-details">
             <Segment.Group>
                 <Segment>
-                {/* <Button name='delete' id='clear-btn' onClick={handleDeleteEntry}>Delete</Button> */}
                     <br></br>
                     <strong>Date:</strong> {dateData}
                     <br></br>
