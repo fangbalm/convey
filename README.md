@@ -21,7 +21,7 @@ Create & Edit Entries
 
 Frameworks: 
 - React
-- Rails
+- Ruby on Rails
 - Semantic UI
 
 
