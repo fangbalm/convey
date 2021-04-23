@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Convey 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description 
 
-## Available Scripts
+Convey is an inclusive journaling/wellness app that allows users to vent about their experiences through guided journal entries. Users are given a selection of categories and prompts to choose from with the intent to aid you in thoughtfully unpacking emotions or finding the right words to say. 
 
-In the project directory, you can run:
 
-### `yarn start`
+## Usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Create, Edit, & Delete Journals 
+- Each user has the ability to create an infinite amount of journals that can hold various topics of a person's choosing. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Toggle Journals Between Public & Private
+- Each user has the ability to toggle their journals between public and private. User journals that are set to public are able to be viewed by everyone in the community via the Explore page. All journals upon first creation are set to private to ensure user discretion. 
 
-### `yarn test`
+Create & Edit Entries
+- Each user has the ability to create an entry, which upon selection will then cue the user to select between the categories: Social, Vent, or Self-Care. Based on the category selected, you will then be given a variety of thoughtful prompts to write about. Once you choose your topic, you're then able to fill out your entry along with your mood at the time of writing. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## Technologies & Libraries
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Frameworks: 
+- React
+- Rails
+- Semantic UI
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Libraries: 
+- [Moment.js](https://momentjs.com/)
+- [Styled Components](https://styled-components.com/)
+- [Formik](https://formik.org/)
+- [React Text Transition](https://github.com/WinterCore/react-text-transition#readme)
 
-### `yarn eject`
+Other: 
+- [Affirmations API](https://github.com/annthurium/affirmations)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Backend 
+[convey-api](https://github.com/fangbalm/convey-api)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
