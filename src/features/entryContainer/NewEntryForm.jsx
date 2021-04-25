@@ -31,7 +31,7 @@ import MyTextInput from '../../common/form/MyTextInput';
             title:  '', 
             mood:  '', 
             content: '', 
-            date: "2021-04-22T12:39:51.259Z",
+            date: "2021-04-25T12:39:51.259Z",
         }; 
 
         const validationSchema = Yup.object({
@@ -88,25 +88,6 @@ import MyTextInput from '../../common/form/MyTextInput';
     }
 
     
-
-
-
-
-
-
-
-
-
-
-
-   
-
-      
-
-      
-
-    //   console.log(entryTitle)
-
 
     return(
     <div className="new-entry-form">
